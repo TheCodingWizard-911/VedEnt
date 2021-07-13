@@ -1,7 +1,7 @@
 const VedEntHomePage = () => {
   return (
     <div>
-      <p>Tech News Home Page</p>
+      <p>Vedant Enterprises Home Page</p>
     </div>
   );
 };
