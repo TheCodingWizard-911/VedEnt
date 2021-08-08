@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -10,19 +8,25 @@ import MenuIcon from "@material-ui/icons/Menu";
 const useStyles = makeStyles((theme) => ({
   toolbar: {
     minHeight: 90,
-    background: theme.palette.secondary.dark,
+    width: "75%",
+    margin: "auto",
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+    },
   },
   title: {
     flexGrow: 1,
     fontSize: "2em",
     fontWeight: 600,
-    marginLeft: theme.spacing(2),
     [theme.breakpoints.down("xs")]: {
-      fontSize: "1.25em",
+      fontSize: "1.5em",
     },
   },
   menuButton: {
     margin: theme.spacing(1),
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
+    },
   },
 }));
 
@@ -33,10 +37,9 @@ const VedEntAppBar = () => {
     <nav>
       <AppBar position="fixed">
         <Toolbar className={classes.toolbar}>
-          {/* <Image src="/Icons/Logo.svg" width={48} height={48} alt="Logo" /> */}
-          <div className={classes.title}>Vedant Enterprises</div>
+          <div className={classes.title}>Ved Ent</div>
           <IconButton
-            edge="start"
+            edge="end"
             className={classes.menuButton}
             color="inherit"
             aria-label="open drawer"

@@ -4,9 +4,7 @@ import Grid from "@material-ui/core/Grid";
 import VedEntAppBar from "../VedEntAppBar";
 
 const useStyles = makeStyles((theme) => ({
-  container: {
-    padding: theme.spacing(0, 1),
-  },
+  container: {},
 }));
 
 const Layout = ({ children }) => {
