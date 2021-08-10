@@ -49,6 +49,9 @@ const useStyles = makeStyles((theme) => ({
       color: "#FFF",
     },
   },
+  lastButton: {
+    marginRight: 0,
+  },
   menuButton: {
     margin: theme.spacing(1),
     [theme.breakpoints.up("sm")]: {
@@ -96,7 +99,10 @@ const VedEntAppBar = () => {
             <Button variant="contained" className={classes.navButton}>
               Gallary
             </Button>
-            <Button variant="contained" className={classes.navButton}>
+            <Button
+              variant="contained"
+              className={`${classes.navButton} ${classes.lastButton}`}
+            >
               Contact
             </Button>
           </div>

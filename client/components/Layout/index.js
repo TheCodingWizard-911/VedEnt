@@ -4,7 +4,13 @@ import Grid from "@material-ui/core/Grid";
 import VedEntAppBar from "../VedEntAppBar";
 
 const useStyles = makeStyles((theme) => ({
-  container: {},
+  container: {
+    width: "75%",
+    margin: "auto",
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+    },
+  },
 }));
 
 const Layout = ({ children }) => {
