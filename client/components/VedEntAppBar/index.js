@@ -5,6 +5,8 @@ import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 
+import VedEntDrawer from "../VedEntDrawer";
+
 const useStyles = makeStyles((theme) => ({
   toolbar: {
     minHeight: 90,
@@ -44,7 +46,7 @@ const VedEntAppBar = () => {
             color="inherit"
             aria-label="open drawer"
           >
-            <MenuIcon />
+            <VedEntDrawer/>
           </IconButton>
         </Toolbar>
       </AppBar>
