@@ -12,7 +12,7 @@ import ExpandIcon from "@material-ui/icons/ExpandMore";
 
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
-import { borderRadius } from "@material-ui/system";
+import VedEntDrawer from "../VedEntDrawer";
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {
@@ -62,6 +62,12 @@ const useStyles = makeStyles((theme) => ({
 
 const VedEntAppBar = () => {
   const classes = useStyles();
+
+  const [drawerOpen, setDrawerOpen] = React.useState(false);
+
+  const toggleDrawer = () => {
+    setDrawerOpen(!drawerOpen);
+  };
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -142,12 +148,14 @@ const VedEntAppBar = () => {
             className={classes.menuButton}
             color="inherit"
             aria-label="open drawer"
+            onClick={toggleDrawer}
           >
             <MenuIcon />
           </IconButton>
         </Toolbar>
       </AppBar>
       <Toolbar className={classes.toolbar} />
+      <VedEntDrawer drawerOpen={drawerOpen} setDrawerOpen={setDrawerOpen} />
     </nav>
   );
 };
